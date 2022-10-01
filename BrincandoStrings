@@ -1,0 +1,40 @@
+		string idade, cpf, nome;
+		float inss, salario, sf;
+		int primeiro, quant;
+		
+		Console.WriteLine("Digite seu nome completo");
+		nome = Console.ReadLine();
+		
+		Console.WriteLine("Digite sua idade");
+		idade = Console.ReadLine();
+		
+		Console.WriteLine("Digite seu CPF");
+		cpf = Console.ReadLine();
+		
+		Console.WriteLine("Digite seu salario");
+		salario = float.Parse(Console.ReadLine());
+		//1°nome
+		
+		primeiro = nome.IndexOf(' ');
+		Console.WriteLine(nome.Substring(0, primeiro));
+		
+		//idade
+		Console.WriteLine("Você tem {0} anos", idade);
+		
+		//Ultimas 3 letras do nome
+		quant = nome.Length;
+		Console.WriteLine("Suas 3 últimas letras são: {0}", nome.Substring(quant-3));
+		
+		//INSS
+		inss = (salario*11)/100; //11% de INSS
+		sf = (salario-inss);
+		Console.WriteLine("Seu desconto do INSS é de {0}", inss);
+		
+		//salario final
+		Console.WriteLine("Seu salário final é de: {0}", sf);
+		
+		//CPF
+		cpf = cpf.Replace("-", "");
+		cpf = cpf.Replace(".", "");
+		Console.WriteLine("Seu CPF É: {0}", cpf);
+		

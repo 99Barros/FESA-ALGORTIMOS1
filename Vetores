@@ -1,0 +1,41 @@
+            //Soma qtd de homens e mulheres
+            int soma_mulheres=0, soma_homens = 0;
+            int soma_altura_mulheres = 0;
+            for (int i = 0; i < sexo.Length; i++)
+            {
+                if (sexo[i] == 'M')
+                {
+                    soma_homens += 1; // soma qtd de homens
+                }
+                else if (sexo[i] == 'F')
+                {
+                    soma_mulheres += 1; // soma qtd de mulheres
+                    soma_altura_mulheres += altura[i];//soma altura mulheres//
+                }
+            }
+            //menor altura e maior altura
+            int menor_altura, maior_altura;
+            menor_altura = altura[0];
+            for (int c = 0; c < altura.Length; c++)
+            {
+                if(altura[c] < menor_altura)
+                {
+                    menor_altura = altura[c];
+                }
+            }
+            maior_altura = altura[0];
+            for (int c = 0; c<altura.Length;c++)
+            {
+                if (altura[c] > maior_altura)
+                {
+                    maior_altura = altura[c];
+                }
+            }
+            double media_altura_mulheres = soma_altura_mulheres / soma_mulheres;
+
+            //exibição
+            Console.Write("A maior altura é {0}: ", maior_altura);
+            Console.Write("A menor altura é {0}: ", menor_altura);
+            Console.Write("A média de altura de mulheres é {0}: ", media_altura_mulheres);
+            Console.Write("Há {0} homens", soma_homens);
+            Console.ReadKey();

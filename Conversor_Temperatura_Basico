@@ -1,0 +1,9 @@
+            Double c, k, f;
+
+            Console.WriteLine("Digite a temperatura em Celsius: ");
+            c = Double.Parse(Console.ReadLine());
+            //f = (1,8C) + 32
+            f = (1.8 * c) + 32;
+            k = c + 273;
+            Console.WriteLine("Sua temperatura em Fanrernti é: {0}", f);
+            Co
